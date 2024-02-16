@@ -1,4 +1,5 @@
 import skills from './data/skills.json';
+import { Header } from "./components/Header";
 
 skills.sort((a, b) => {
   return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
@@ -7,9 +8,7 @@ skills.sort((a, b) => {
 function App() {
   return (
     <main>
-      <h1 className="text-2xl mb-3">React Seite</h1>
-      <p>Welcome to this seite.</p>
-
+      <Header />
     <h2 className="text-xl mt-4 text-yellow-300">{skills.length} Web Developer Skills</h2>
       <ul className="list-disc ml-6">
         {skills.map((skill => {
